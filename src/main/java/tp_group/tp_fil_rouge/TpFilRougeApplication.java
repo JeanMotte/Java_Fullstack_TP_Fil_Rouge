@@ -12,10 +12,5 @@ public class TpFilRougeApplication {
 
         SpringApplication.run(TpFilRougeApplication.class, args);
 
-        List<String> messageList = List.of("Hello", "LSI", "2025-26");
-
-        for(String message : messageList) {
-            System.out.println(message);
-        }
     }
 }
