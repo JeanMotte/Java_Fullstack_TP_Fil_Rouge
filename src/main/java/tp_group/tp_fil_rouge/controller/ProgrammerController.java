@@ -1,5 +1,6 @@
 package tp_group.tp_fil_rouge.controller;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import tp_group.tp_fil_rouge.model.Programmeur;
 import tp_group.tp_fil_rouge.repository.ProgrammeurRepository;
@@ -32,7 +33,9 @@ public class ProgrammerController {
     };
 
     @GetMapping("/{id}")
-    public Optional<Programmeur> getProgrammerById(@PathVariable int id) {
-        return programmerService.getProgrammeryId(id);
+    public ResponseEntity<?> getProgrammerById(@PathVariable int id) {
+        return programmerService.getProgrammerById(id)
+                .<ResponseEntity<?>>map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.status(404).body("Ce programmeur n'existe pas"));
     }
 }

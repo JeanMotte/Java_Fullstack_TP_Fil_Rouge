@@ -1,6 +1,7 @@
 package tp_group.tp_fil_rouge.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import tp_group.tp_fil_rouge.model.Programmeur;
 import tp_group.tp_fil_rouge.repository.ProgrammeurRepository;
@@ -18,7 +19,7 @@ public class ProgrammerService {
         return programmeurRepository.findAll();
     };
 
-    public Optional<Programmeur> getProgrammeryId(int id) {
+    public Optional<Programmeur> getProgrammerById(int id) {
         return programmeurRepository.findById(id);
     }
 }
