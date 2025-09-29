@@ -1,4 +1,4 @@
-package model;
+package tp_group.tp_fil_rouge.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
