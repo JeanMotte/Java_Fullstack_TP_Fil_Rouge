@@ -1,5 +1,6 @@
 package tp_group.tp_fil_rouge.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
